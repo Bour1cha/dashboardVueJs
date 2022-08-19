@@ -8,6 +8,7 @@
     <div class= "container">
       <!-- Sidebar -->
       <x-sidebar/>
+      <!-- partie centrale -->
       <main>
           <h1>Dashboard</h1>
           <div class="date">
@@ -15,12 +16,16 @@
           </div>
           <!-- Statistiques -->
                 <Insights/>
+                <!-- Commandes -->
                 <RecentOrder/>
       </main>
-
+      <!-- partie droite -->
       <div class="right">
+        <!-- header -->
           <TopPart/>
+          <!-- derniers post -->
           <RecentUpdates/>
+          <!-- analyse des ventes -->
         <SalesAnalyst/>
       </div>
     </div>
