@@ -10,11 +10,11 @@
             </div>
         </div>
         <div class="sidebar">
-          <a href="#">
+          <a href="#"  class="active">
             <span><font-awesome-icon icon="fa-solid fa-box" /></span>   
             <h3>Dashboard</h3>
           </a>
-          <a href="#" class="active">
+          <a href="#" >
             <span><font-awesome-icon icon="fa-solid fa-user" /></span>   
             <h3>Clients</h3>
           </a>
@@ -49,8 +49,48 @@
         </div>
       </aside>
 </template>
+
 <script>
-export default {
+
+import {defineComponent, ref,  nextTick} from 'vue'
+
+export default defineComponent({
   name: 'XSidebar',
+
+
+setup() {
+
+// sidebar
+const sidebarVisible = ref(false)
+const toggleButton = () => sidebarVisible.value = !sidebarVisible.value
+
+
+nextTick(() => {
+
+
+  const sideMenu = document.querySelector("aside");
+const menuBtn = document.querySelector("#menu-btn");
+const closeBtn = document.querySelector("#close-btn");
+
+console.log({sideMenu}, {menuBtn}, {closeBtn})
+
+menuBtn.addEventListener('click', () => {
+  sideMenu.style.display = 'block';
+})
+
+closeBtn.addEventListener('click' ,() => {
+  sideMenu.style.display = "none";
+})
+
+})
+
+return {
+  sidebarVisible,
+  toggleButton
 }
+
+},
+
+
+})
 </script>

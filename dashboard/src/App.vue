@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import DashboardMain from './components/DashboardMain.vue';
+import DashboardMain from './components/Accueil/DashboardMain.vue';
 
 
 export default {

@@ -1,5 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0,0,0, 0.4);
+  --box-shadow: 0 2rrem 3rem var(--color-light);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -547,7 +556,7 @@ main table tbody tr td:first-child {
   }
   aside {
     position: fixed;
-    left: 0;
+    left: -100%;
     background: var(--color-white);
     width: 18rem;
     z-index: 3;
@@ -555,6 +564,18 @@ main table tbody tr td:first-child {
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    -webkit-animation: showMenu 400ms ease-in-out forwards;
+            animation: showMenu 400ms ease-in-out forwards;
+  }
+  @-webkit-keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
   }
   aside .logo {
     margin-left: 1rem;

@@ -20,8 +20,46 @@
 
 </template>
 
+
 <script>
-export default {
+
+import {defineComponent, ref,  nextTick} from 'vue'
+
+export default defineComponent({
   name: 'TopPart',
+
+
+setup() {
+
+// darkmode
+const darkMode = ref(false)
+const lightButton = () => darkMode.value = !darkMode.value
+
+
+nextTick(() => {
+
+const themeToggler = document.querySelector(".theme-toggler");
+
+console.log({themeToggler})
+
+// change theme
+
+themeToggler.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme-variables');
+
+  themeToggler.querySelector('font-awesome-icon:nth-child(1)').classList.toggle('active');
+  themeToggler.querySelector('font-awesome-icon:nth-child(2)').classList.toggle('active');
+})
+
+})
+
+return {
+  darkMode,
+  lightButton
 }
+
+},
+
+
+})
 </script>
