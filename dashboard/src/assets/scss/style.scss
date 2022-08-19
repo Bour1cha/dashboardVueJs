@@ -152,16 +152,16 @@ b{
 }
 
 .primary{
-    color: var(--color-primary);
+    color: var(--color-primary)!important;
 }
 .danger{
-    color: var(--color-danger);
+    color: var(--color-danger)!important;
 }
 .success{
-    color: var(--color-success);
+    color: var(--color-success)!important;
 }
 .warning{
-    color: var(--color-warning);
+    color: var(--color-warning)!important;
 }
 
 // sidebar
@@ -291,6 +291,50 @@ main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap:1.6rem;
+
+        .h3{
+            margin: 1rem 0 0.6rem;
+            font-size: 1rem;
+        }
+
+        .progress {
+            position: relative;
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+        }
+
+        .sales .middle svg circle {
+            stroke-dashoffset: -30;
+            stroke-dasharray: 200;
+        }
+
+        .expenses .middle svg circle {
+            stroke-dashoffset: 20;
+            stroke-dasharray: 80;
+        }
+
+        .incomes .middle svg circle {
+            stroke-dashoffset: 35;
+            stroke-dasharray: 110;
+        }
+
+
+
+       .middle svg{
+            width: 7rem;
+            height: 7rem;
+                // style de la progress bar circulaire
+            circle{
+                fill: none;
+                stroke: var(--color-primary);
+                stroke-width: 14;
+                stroke-linecap: round;
+                transform: translate(5px, 5px);
+                stroke-dasharray: 110;
+                stroke-dashoffset: 92;
+            }
+        }
     }
 
     .insights > div{
@@ -300,6 +344,12 @@ main {
         margin-top: 1rem;
         box-shadow: var(--box-shadow);
         transition: all 300ms ease;
+
+        .middle{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     .insights > div:hover{
@@ -312,6 +362,73 @@ main {
         font-size: 2rem;
     }
 
+    .insights > div.incomes span {
+        color: var(--color-success) ;
+    }
+
+    .insights > div.expenses span {
+        color: var(--color-primary);
+    }
+
+    .progress {
+        .number {
+            position:absolute ;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    small {
+        margin-top: 1.3rem;
+        display: block;
+        color: var(--color-info-dark);
+    }
+
+    .recent-orders{
+        margin-top: 2rem;
+
+        h2{
+            margin-bottom: 0.8rem;
+        }
+
+        table {
+            background: var(--color-white);
+            width: 100%;
+            border-radius: var(--card-border-radius);
+            padding: var(--card-padding);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: all 300ms ease;
+
+            tbody {
+                td{
+                    height: 2.8rem;
+                    border-bottom: 1px solid var(--color-light);
+                    color: var(--color-dark-variant);
+                }
+
+                tr:last-child td{
+                    border: none;
+                }
+            }
+        }
+
+        table:hover{
+            box-shadow: none;
+        }
+        
+        a{
+            text-align: center;
+            display: block;
+            margin: 1rem auto;
+            color: var(--color-primary);
+        }
+    }
 }
 
 .middle{
