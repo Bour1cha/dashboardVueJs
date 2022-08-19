@@ -16,8 +16,13 @@
           <!-- Statistiques -->
                 <Insights/>
                 <RecentOrder/>
-  
       </main>
+
+      <div class="right">
+          <TopPart/>
+          <RecentUpdates/>
+        <SalesAnalyst/>
+      </div>
     </div>
 </body>
 </template>
@@ -27,10 +32,13 @@
 import XSidebar from './Sidebar.vue';
 import Insights from './Insights.vue';
 import RecentOrder from './RecentOrder.vue';
+import RecentUpdates from './RecentUpdates.vue';
+import TopPart from './TopPart.vue';
+import SalesAnalyst from './SalesAnalyst.vue';
 
 export default {
 
-    components: { XSidebar, Insights, RecentOrder }
+    components: { XSidebar, Insights, RecentOrder, RecentUpdates, TopPart, SalesAnalyst }
 }
 </script>
 

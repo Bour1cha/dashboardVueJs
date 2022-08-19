@@ -37,15 +37,15 @@
                             <tr>
                               <td>Support ordinateur portable</td>
                               <td>795425</td>
-                              <td>Non reçu</td>
-                              <td class="warning">En attente</td>
+                              <td>payé</td>
+                              <td class="success">Terminé</td>
                               <td class="primary">Details</td>
                             </tr>
                             <tr>
-                              <td>Support ordinateur portable</td>
+                              <td>Tablette tactile</td>
                               <td>795426</td>
-                              <td>Non reçu</td>
-                              <td class="warning">En attente</td>
+                              <td>payé</td>
+                              <td class="success">Terminé</td>
                               <td class="primary">Details</td>
                             </tr>
                             <tr>
