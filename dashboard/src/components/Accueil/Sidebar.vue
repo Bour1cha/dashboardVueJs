@@ -1,5 +1,5 @@
 <template>
-      <aside>
+      <aside class="back">
         <div class="top">
           <div class="logo">
             <img src="@/assets/img/logo.png" alt="logo">
@@ -9,7 +9,7 @@
          <span><font-awesome-icon icon="fa-solid fa-xmark" /></span>   
             </div>
         </div>
-        <div class="sidebar">
+        <div class="sidebar back">
           <a href="#"  class="active">
             <span><font-awesome-icon icon="fa-solid fa-box" /></span>   
             <h3>Dashboard</h3>

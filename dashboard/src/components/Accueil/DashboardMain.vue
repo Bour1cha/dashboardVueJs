@@ -4,7 +4,7 @@
 
 
 <template>
-<body>
+<body class="back">
     <div class= "container">
       <!-- Sidebar -->
       <x-sidebar/>
