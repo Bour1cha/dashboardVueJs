@@ -4,7 +4,7 @@
     <div class="recent-orders">
                   <h2>Commandes récentes</h2>
                   <!-- <table> permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions. -->
-                  <table>
+                  <table class="back">
                     <!-- <thead> définit un ensemble de lignes qui définit l'en-tête des colonnes d'un tableau. -->
                         <thead>
                           <!-- <tr> définit une ligne de cellules dans un tableau. -->

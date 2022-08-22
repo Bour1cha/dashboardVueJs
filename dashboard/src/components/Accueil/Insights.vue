@@ -1,6 +1,6 @@
 <template>
                 <div class="insights">
-            <div class="sales">
+            <div class="sales back">
               <span><font-awesome-icon icon="fa-solid fa-euro-sign" /></span>
                 <div class="middle">
                     <div class="left">
@@ -18,7 +18,7 @@
                 </div>
                 <small class="text-muted">Dernières 24 heures</small>
             </div>
-            <div class="expenses">
+            <div class="expenses back">
               <span><font-awesome-icon icon="fa-solid fa-chart-simple" /></span>
                 <div class="middle">
                     <div class="left">
@@ -36,7 +36,7 @@
                 </div>
                 <small class="text-muted">Dernières 24 heures</small>
             </div>
-            <div class="incomes">
+            <div class="incomes back">
               <span><font-awesome-icon icon="fa-solid fa-arrow-trend-up" /></span>
                 <div class="middle">
                     <div class="left">

@@ -185,12 +185,13 @@ b{
 
 #toggle {
 
-    margin-left: 3px;
+    margin-left: -50px;
     margin-bottom: 15px;
     position: absolute;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 40px;
-    left: 0;
     height: 20px;
     border-radius: 160px;
     background: black;

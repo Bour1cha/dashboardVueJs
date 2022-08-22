@@ -1,7 +1,7 @@
 <template>
       <div class="sales-analytics">
             <h2>Analyse des ventes</h2>
-                        <div class="item online">
+                        <div class="item back online ">
               <div class="icon">
                 <span><font-awesome-icon icon="fa-solid fa-cart-shopping" /></span>
               </div>

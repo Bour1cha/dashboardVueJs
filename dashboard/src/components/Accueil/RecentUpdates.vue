@@ -1,8 +1,8 @@
 <template>
 
-          <div class="recent-updates">
+          <div class="recent-updates back">
               <h2>Mises à jour récentes</h2>
-              <div class="updates">
+              <div class="updates back">
                 <div class="update">
                       <div class="profile-photo">
                           <img src="@/assets/img/profile-2.jpg" alt="profile_2">
