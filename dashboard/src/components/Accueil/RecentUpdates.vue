@@ -1,6 +1,6 @@
 <template>
 
-          <div class="recent-updates back">
+          <div class="recent-updates ">
               <h2>Mises à jour récentes</h2>
               <div class="updates back">
                 <div class="update">

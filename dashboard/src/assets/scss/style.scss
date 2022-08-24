@@ -556,7 +556,7 @@ main {
             margin-bottom: 0.8rem;
         }
         .updates {
-            background: var(--color-white);
+          
             padding: var(--card-padding);
             border-radius: var(--card-border-radius);
             box-shadow: var(--box-shadow);
@@ -567,6 +567,12 @@ main {
                 grid-template-columns: 2.6rem auto;
                 gap: 1rem;
                 margin-bottom: 1rem;
+            }
+
+            .back.active {
+                background: black;
+                color: #fff;
+                // border-bottom: 2px solid #fff;
             }
         }
 
@@ -583,7 +589,6 @@ main {
         }
 
         .item{
-            background: var(--color-white);
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -638,6 +643,7 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
 
             div{
                 display: flex;
