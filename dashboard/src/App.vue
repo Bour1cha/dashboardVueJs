@@ -1,6 +1,6 @@
 <template>
 
-  <DashboardMain />
+  <router-view/>
 </template>
 
 <script>

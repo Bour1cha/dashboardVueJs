@@ -9,9 +9,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faXmark, faBox , faUser, faClipboardList, faChartLine , faMessage, faClipboard, faCircleExclamation, faPlus, faArrowRightFromBracket,faChartSimple, faArrowTrendUp, faEuroSign, faBars, faMoon, faSun,faCartShopping, faBagShopping} from '@fortawesome/free-solid-svg-icons'
+import router from '@/router'
 
 library.add(faXmark, faBox, faUser, faClipboardList, faChartLine, faMessage, faClipboard, faCircleExclamation, faPlus, faArrowRightFromBracket, faChartSimple, faArrowTrendUp, faEuroSign, faBars, faMoon, faSun, faCartShopping,faBagShopping)
 
-createApp(App)
+const app = createApp(App)
+
+
+app
 .component('font-awesome-icon', FontAwesomeIcon)
+.use(router)
 .mount('#app')

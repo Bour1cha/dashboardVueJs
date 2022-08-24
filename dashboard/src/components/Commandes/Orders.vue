@@ -30,13 +30,12 @@
 
 
 <script>
-import XSidebar from './Sidebar.vue';
-import RecentOrder from './RecentOrder.vue';
-import TopPart from './TopPart.vue';
+import XSidebar from '../Accueil/Sidebar.vue';
+import RecentOrder from '../Accueil/RecentOrder.vue';
+import TopPart from '../Accueil/TopPart.vue';
 
 export default {
-
-    components: { XSidebar, RecentOrder, TopPart,  }
+      components: { XSidebar, RecentOrder, TopPart,  }
 }
 </script>
 

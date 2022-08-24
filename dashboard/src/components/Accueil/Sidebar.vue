@@ -10,18 +10,18 @@
             </div>
         </div>
         <div class="sidebar back">
-          <a href="#"  class="active">
+         <router-link to="/" class="active">
             <span><font-awesome-icon icon="fa-solid fa-box" /></span>   
             <h3>Dashboard</h3>
-          </a>
-          <a href="#" >
+         </router-link>
+          <a href="#" > 
             <span><font-awesome-icon icon="fa-solid fa-user" /></span>   
             <h3>Clients</h3>
           </a>
-          <a href="#">
+         <router-link :to="{name: 'orders.index'}"> 
             <span><font-awesome-icon icon="fa-solid fa-clipboard-list" /></span>   
             <h3>Commandes</h3>
-          </a>
+         </router-link>
           <a href="#">
             <span><font-awesome-icon icon="fa-solid fa-chart-line" /></span>   
             <h3>Statistiques</h3>
