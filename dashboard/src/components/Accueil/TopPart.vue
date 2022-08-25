@@ -5,10 +5,11 @@
             </button>
 
                     <div class="nav" id="navb"> 
-                           <div id="toggle">
+
+            <div class="profile">
+                                         <div id="toggle">
                 <i class="indicator"></i>
                      </div>
-            <div class="profile">
                 <div class="info">
                     <p>Bonjour, <b>Utilisateur 1</b></p>
                     <small class="text-muted">Admin</small>

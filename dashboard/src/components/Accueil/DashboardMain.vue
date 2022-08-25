@@ -26,7 +26,7 @@
           <!-- derniers post -->
           <RecentUpdates/>
           <!-- analyse des ventes -->
-        <SalesAnalyst/>
+        <SalesAnalyst />
       </div>
     </div>
 </body>
@@ -34,6 +34,9 @@
 
 
 <script>
+//import bdd
+import infoAnalyse from '@/Bdd'
+//components
 import XSidebar from './Sidebar.vue';
 import Insights from './Insights.vue';
 import RecentOrder from './RecentOrder.vue';
@@ -42,9 +45,26 @@ import TopPart from './TopPart.vue';
 import SalesAnalyst from './SalesAnalyst.vue';
 
 export default {
+      name: 'Accueil',
+    components: { XSidebar, Insights, RecentOrder, RecentUpdates, TopPart, SalesAnalyst },
 
-    components: { XSidebar, Insights, RecentOrder, RecentUpdates, TopPart, SalesAnalyst }
+    setup() {
+      class AnalysesVentes {
+          constructor (logo,statut,date,pourcentage,nombres){
+              this.logo = logo
+              this.statut = statut
+              this.date = date
+              this.pourcentage = pourcentage
+              this.nombres = nombres
+          }
+      }
+  var ventes = new AnalysesVentes('<font-awesome-icon icon="fa-solid fa-cart-shopping" />', 'Commande en ligne', 'dernières 24 heures','+39%','3849')
+
+  console.log(ventes)
 }
+}
+
+
 </script>
 
 
