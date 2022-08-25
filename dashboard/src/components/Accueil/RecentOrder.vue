@@ -59,7 +59,7 @@
                               <td>Support ordinateur portable</td>
                               <td>795428</td>
                               <td>Non reçu</td>
-                              <td class="warning">En attente</td>
+                              <td class="success">Terminé</td>
                               <td class="primary">Details</td>
                             </tr>
                             <tr>
@@ -73,14 +73,14 @@
                               <td>Support ordinateur portable</td>
                               <td>795430</td>
                               <td>Non reçu</td>
-                              <td class="warning">En attente</td>
+                              <td class="success">Terminé</td>
                               <td class="primary">Details</td>
                             </tr>
                             <tr>
                               <td>Support ordinateur portable</td>
                               <td>795431</td>
                               <td>Non reçu</td>
-                              <td class="warning">En attente</td>
+                              <td class="success">Terminé</td>
                               <td class="primary">Details</td>
                             </tr>
                             <tr>

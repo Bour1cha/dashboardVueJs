@@ -16,13 +16,14 @@
           </div>
 
                 <!-- Commandes -->
+                <Charts/>
                 <RecentOrder/>
       </main>
       <!-- partie droite -->
       <div class="right">
         <!-- header -->
           <TopPart/>
-        
+        <SalesAnalyst/>
       </div>
     </div>
 </body>
@@ -31,11 +32,13 @@
 
 <script>
 import XSidebar from '../Accueil/Sidebar.vue';
-import RecentOrder from '../Accueil/RecentOrder.vue';
 import TopPart from '../Accueil/TopPart.vue';
+import RecentOrder from '../Accueil/RecentOrder.vue';
+import Charts from '../Commandes/Charts.vue';
+import SalesAnalyst from '../Accueil/SalesAnalyst.vue';
 
 export default {
-      components: { XSidebar, RecentOrder, TopPart,  }
+      components: { XSidebar, TopPart, RecentOrder, Charts, SalesAnalyst }
 }
 </script>
 
