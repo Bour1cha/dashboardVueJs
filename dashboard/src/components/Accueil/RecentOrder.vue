@@ -19,9 +19,10 @@
                         </thead>
                         <!-- <tbody> permet de regrouper un ou plusieurs éléments <tr> afin de former le corps d'un tableau HTML -->
                         <tbody>
+                                <li v-for="item in items">{{item.message}}</li>
                             <tr>
                               <!-- <td> définit une cellule d'un tableau qui contient des données. -->
-                              <td>Support ordinateur portable</td>
+                              <td>Montre connectée</td>
                               <td>795423</td>
                               <td>Non reçu</td>
                               <td class="warning">En attente</td>
@@ -102,5 +103,14 @@
 <script>
 export default {
   name: 'RecentOrder',
+
+  data() {
+  return {
+    parentMessage:'Parent',
+    items: [{message: 'Support ordinateur portable'}, {message: 'Tablette tactile'} , {message: 'Montre connectée'}]
+  }
 }
+};
+
+
 </script>
