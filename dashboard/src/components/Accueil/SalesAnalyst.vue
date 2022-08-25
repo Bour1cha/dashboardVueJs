@@ -1,19 +1,7 @@
 <template>
       <div class="sales-analytics">
             <h2>Analyse des ventes</h2>
-                        <div class="item   " v-for="(card,index) in 3" :key="index">
-              <div class="icon">
-                <span><font-awesome-icon icon="fa-solid fa-cart-shopping" /></span>
-              </div>
-              <div class="right">
-                      <div class="info">
-                          <h3>Commandes en lignes</h3>
-                          <small class="text-muted">dernières 24 heures</small>
-                      </div>
-                      <h5 class="success">+39%</h5>
-                      <h3>3849</h3>
-              </div>
-            </div>
+              <SalesCard v-for="(card,index) in tree_analyses" :info_analyses="card" :key="index"/>
             <div class="item " id="offline">
               <div class="icon">
                 <span><font-awesome-icon icon="fa-solid fa-bag-shopping" /></span>
@@ -50,7 +38,14 @@
 </template>
 
 <script>
+//components
+import SalesCard from './SalesCard.vue'
+
 export default {
-  name: 'SalesAnalyst',
+    name: "SalesAnalyst",
+    props: {
+        tree_analyses: Array,
+    },
+    components: { SalesCard }
 }
 </script>

@@ -26,7 +26,7 @@
           <!-- derniers post -->
           <RecentUpdates/>
           <!-- analyse des ventes -->
-        <SalesAnalyst />
+        <SalesAnalyst v-for="(data, i) in DataAnalysesVentes" :key="i" :tree_analyses="data" />
       </div>
     </div>
 </body>
@@ -36,7 +36,7 @@
 <script>
 //import bdd
 import infoAnalyse from '@/Bdd'
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 //components
 import XSidebar from './Sidebar.vue';
 import Insights from './Insights.vue';
@@ -60,29 +60,31 @@ export default {
           }
       }
 
-let DataAnalysesVentes = []
+
+let DataAnalysesVentes = ref([]);
 
 const makeDataAnalysesVentes = () => {
-   let three_analyses = [];
+   let tree_analyses = [];
   // boucle for of équivalent de for each 
     for (const analysesVentes of infoAnalyse) {
       const new_analysesVentes = new AnalysesVentes(analysesVentes.logo, analysesVentes.statut, analysesVentes.date, analysesVentes.pourcentage, analysesVentes.nombres)
 
-     
-
-     if (three_analyses.length === 2) {
-       three_analyses.push(new_analysesVentes);
-       DataAnalysesVentes.push(three_analyses);
-       three_analyses =[];
+    if (tree_analyses.length === 0) {
+      tree_analyses.push(new_analysesVentes);
+         DataAnalysesVentes.value.push(tree_analyses);
+       tree_analyses =[];
      } else {
-      three_analyses.push(new_analysesVentes);
+      tree_analyses.push(new_analysesVentes);
      }
     }
-
-    console.log(DataAnalysesVentes);
 }
   // lorsque tout les composants sont chargés
     onMounted(makeDataAnalysesVentes);
+
+  //return
+    return {
+      DataAnalysesVentes
+    }
 }
 }
 
