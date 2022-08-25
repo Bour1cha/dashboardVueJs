@@ -1,7 +1,7 @@
 <template>
       <div class="sales-analytics">
             <h2>Analyse des ventes</h2>
-                        <div class="item  online " v-for="(card,index) in 3" :key="index">
+                        <div class="item   " v-for="(card,index) in 3" :key="index">
               <div class="icon">
                 <span><font-awesome-icon icon="fa-solid fa-cart-shopping" /></span>
               </div>
@@ -14,7 +14,7 @@
                       <h3>3849</h3>
               </div>
             </div>
-            <div class="item offline" id="offline">
+            <div class="item " id="offline">
               <div class="icon">
                 <span><font-awesome-icon icon="fa-solid fa-bag-shopping" /></span>
               </div>
@@ -27,7 +27,7 @@
                       <h3>1100</h3>
               </div>
             </div>
-            <div class="item customers" id="customers">
+            <div class="item " id="customers">
               <div class="icon">
                 <span><font-awesome-icon icon="fa-solid fa-user" /></span>
               </div>

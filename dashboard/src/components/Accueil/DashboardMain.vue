@@ -36,6 +36,7 @@
 <script>
 //import bdd
 import infoAnalyse from '@/Bdd'
+import { onMounted } from 'vue';
 //components
 import XSidebar from './Sidebar.vue';
 import Insights from './Insights.vue';
@@ -58,9 +59,30 @@ export default {
               this.nombres = nombres
           }
       }
-  var ventes = new AnalysesVentes('<font-awesome-icon icon="fa-solid fa-cart-shopping" />', 'Commande en ligne', 'dernières 24 heures','+39%','3849')
 
-  console.log(ventes)
+let DataAnalysesVentes = []
+
+const makeDataAnalysesVentes = () => {
+   let three_analyses = [];
+  // boucle for of équivalent de for each 
+    for (const analysesVentes of infoAnalyse) {
+      const new_analysesVentes = new AnalysesVentes(analysesVentes.logo, analysesVentes.statut, analysesVentes.date, analysesVentes.pourcentage, analysesVentes.nombres)
+
+     
+
+     if (three_analyses.length === 2) {
+       three_analyses.push(new_analysesVentes);
+       DataAnalysesVentes.push(three_analyses);
+       three_analyses =[];
+     } else {
+      three_analyses.push(new_analysesVentes);
+     }
+    }
+
+    console.log(DataAnalysesVentes);
+}
+  // lorsque tout les composants sont chargés
+    onMounted(makeDataAnalysesVentes);
 }
 }
 

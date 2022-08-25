@@ -11,10 +11,6 @@
       <!-- partie centrale -->
       <main>
           <h1>Commandes</h1>
-          <div class="date">
-              <input type="date">
-          </div>
-
                 <!-- Commandes -->
                 <Charts/>
                 <RecentOrder/>
