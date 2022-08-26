@@ -43,7 +43,7 @@ import Insights from './Insights.vue';
 import RecentOrder from './RecentOrder.vue';
 import RecentUpdates from './RecentUpdates.vue';
 import TopPart from './TopPart.vue';
-import SalesAnalyst from './SalesAnalyst.vue';
+import SalesAnalyst from './SalesAnalyses/SalesAnalyst.vue';
 
 export default {
       name: 'Accueil',

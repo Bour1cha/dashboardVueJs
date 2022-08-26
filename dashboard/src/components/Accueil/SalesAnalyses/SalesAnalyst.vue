@@ -39,7 +39,7 @@
 
 <script>
 //components
-import SalesCard from './SalesCard.vue'
+import SalesCard from './SalesCard.vue';
 
 export default {
     name: "SalesAnalyst",

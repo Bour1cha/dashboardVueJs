@@ -36,7 +36,8 @@ import XSidebar from '../Accueil/Sidebar.vue';
 import TopPart from '../Accueil/TopPart.vue';
 import RecentOrder from '../Accueil/RecentOrder.vue';
 import Charts from '../Commandes/Charts.vue';
-import SalesAnalyst from '../Accueil/SalesAnalyst.vue';
+import SalesAnalyst from '../Accueil/SalesAnalyses/SalesAnalyst.vue';
+
 
 export default {
       components: { XSidebar, TopPart, RecentOrder, Charts, SalesAnalyst },
