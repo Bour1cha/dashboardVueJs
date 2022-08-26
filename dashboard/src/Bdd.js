@@ -1,6 +1,6 @@
 // donnée pour les cartes dans analyse des ventes
 
-const infoAnalyse = [
+export const infoAnalyse = [
     
     {
 
@@ -16,4 +16,3 @@ const infoAnalyse = [
 
 ]
 
-module.exports = infoAnalyse;

@@ -24,9 +24,9 @@
         <!-- header -->
           <TopPart/>
           <!-- derniers post -->
-          <RecentUpdates/>
+          <RecentUpdates :tree_comments=" DataCommentaires"/>
           <!-- analyse des ventes -->
-        <SalesAnalyst v-for="(data, i) in DataAnalysesVentes" :key="i" :tree_analyses="data" />
+        <SalesAnalyst :tree_analyses="DataAnalysesVentes" />
       </div>
     </div>
 </body>
@@ -35,13 +35,14 @@
 
 <script>
 //import bdd
-import infoAnalyse from '@/Bdd'
+import {infoAnalyse} from '@/Bdd';
+import {comments} from '@/Bddco';
 import { onMounted, ref } from 'vue';
 //components
 import XSidebar from './Sidebar.vue';
 import Insights from './Insights.vue';
 import RecentOrder from './RecentOrder.vue';
-import RecentUpdates from './RecentUpdates.vue';
+import RecentUpdates from './Comments/RecentUpdates.vue';
 import TopPart from './TopPart.vue';
 import SalesAnalyst from './SalesAnalyses/SalesAnalyst.vue';
 
@@ -50,6 +51,7 @@ export default {
     components: { XSidebar, Insights, RecentOrder, RecentUpdates, TopPart, SalesAnalyst },
 
     setup() {
+      // script pour l'importation des données de la bases de donéne bdd pour les analyses de ventes
       class AnalysesVentes {
           constructor (logo,statut,date,pourcentage,nombres){
               this.logo = logo
@@ -59,32 +61,39 @@ export default {
               this.nombres = nombres
           }
       }
+    // class pour les commentaires
+         class Commentaires {
+          constructor (image,nom,commentaire,date){
+              this.image = image
+              this.nom = nom
+              this.commentaire = commentaire
+              this.date = date
+          }
+      }
 
-
+// variable pour les analyses de ventes
 let DataAnalysesVentes = ref([]);
 
-const makeDataAnalysesVentes = () => {
-   let tree_analyses = [];
-  // boucle for of équivalent de for each 
-    for (const analysesVentes of infoAnalyse) {
-      const new_analysesVentes = new AnalysesVentes(analysesVentes.logo, analysesVentes.statut, analysesVentes.date, analysesVentes.pourcentage, analysesVentes.nombres)
+// variable pour les commentaires
+let DataCommentaires = ref([]);
 
-    if (tree_analyses.length === 0) {
-      tree_analyses.push(new_analysesVentes);
-         DataAnalysesVentes.value.push(tree_analyses);
-       tree_analyses =[];
-     } else {
-      tree_analyses.push(new_analysesVentes);
-     }
-    }
-}
+const makeDataAnalysesVentes = () => DataAnalysesVentes.value = infoAnalyse.map(infos => new AnalysesVentes(infos.logo, infos.statut, infos.date, infos.pourcentage, infos.nombres))
+
+const makeDataCommentaires = () => DataCommentaires.value = comments.map(comment => new Commentaires(comment.image, comment.nom, comment.commentaire, comment.date))
+
+
   // lorsque tout les composants sont chargés
-    onMounted(makeDataAnalysesVentes);
+    onMounted(() => {
+      makeDataAnalysesVentes()
+      makeDataCommentaires()
+    });
 
   //return
     return {
-      DataAnalysesVentes
-    }
+      DataAnalysesVentes, DataCommentaires
+
+
+}
 }
 }
 

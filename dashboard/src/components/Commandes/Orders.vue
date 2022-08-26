@@ -5,7 +5,7 @@
 
 <template>
 <body class="back">
-    <div class= "container">
+    <div class = "container">
       <!-- Sidebar -->
       <x-sidebar/>
       <!-- partie centrale -->
@@ -20,7 +20,7 @@
       <div class="right">
         <!-- header -->
           <TopPart/>
-        <SalesAnalyst v-for="(data, i) in DataAnalysesVentes" :key="i" :tree_analyses="data" />
+        <SalesAnalyst  SalesAnalyst :tree_analyses="DataAnalysesVentes" />
       </div>
     </div>
 </body>
@@ -29,7 +29,7 @@
 
 <script>
 //import bdd
-import infoAnalyse from '@/Bdd'
+import {infoAnalyse} from '@/Bdd'
 import { onMounted, ref } from 'vue';
 //components
 import XSidebar from '../Accueil/Sidebar.vue';
@@ -42,7 +42,9 @@ import SalesAnalyst from '../Accueil/SalesAnalyses/SalesAnalyst.vue';
 export default {
       components: { XSidebar, TopPart, RecentOrder, Charts, SalesAnalyst },
 
-        setup() {
+    
+    setup() {
+      // script pour l'importation des données de la bases de donéne bdd pour les analyses de ventes
       class AnalysesVentes {
           constructor (logo,statut,date,pourcentage,nombres){
               this.logo = logo
@@ -52,32 +54,24 @@ export default {
               this.nombres = nombres
           }
       }
-
-
+// variable pour les analyses de ventes
 let DataAnalysesVentes = ref([]);
 
-const makeDataAnalysesVentes = () => {
-   let tree_analyses = [];
-  // boucle for of équivalent de for each 
-    for (const analysesVentes of infoAnalyse) {
-      const new_analysesVentes = new AnalysesVentes(analysesVentes.logo, analysesVentes.statut, analysesVentes.date, analysesVentes.pourcentage, analysesVentes.nombres)
 
-    if (tree_analyses.length === 0) {
-      tree_analyses.push(new_analysesVentes);
-         DataAnalysesVentes.value.push(tree_analyses);
-       tree_analyses =[];
-     } else {
-      tree_analyses.push(new_analysesVentes);
-     }
-    }
-}
+
+const makeDataAnalysesVentes = () => DataAnalysesVentes.value = infoAnalyse.map(infos => new AnalysesVentes(infos.logo, infos.statut, infos.date, infos.pourcentage, infos.nombres))
+
   // lorsque tout les composants sont chargés
-    onMounted(makeDataAnalysesVentes);
+    onMounted(() => {
+      makeDataAnalysesVentes()
+    });
 
   //return
     return {
       DataAnalysesVentes
-    }
+
+
+}
 }
       
 }

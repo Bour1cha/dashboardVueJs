@@ -19,7 +19,6 @@
                         </thead>
                         <!-- <tbody> permet de regrouper un ou plusieurs éléments <tr> afin de former le corps d'un tableau HTML -->
                         <tbody>
-                                <li v-for="item in items">{{item.message}}</li>
                             <tr>
                               <!-- <td> définit une cellule d'un tableau qui contient des données. -->
                               <td>Montre connectée</td>
