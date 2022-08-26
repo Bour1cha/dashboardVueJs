@@ -159,6 +159,7 @@ small {
     height: 2.8rem;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 
@@ -644,6 +645,10 @@ main {
             border-radius: var(--card-border-radius);
             box-shadow: var(--box-shadow);
             transition: all 300ms ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
 
             .update{
                 display: grid;

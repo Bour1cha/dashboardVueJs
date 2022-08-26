@@ -14,10 +14,10 @@
             <span><font-awesome-icon icon="fa-solid fa-box" /></span>   
             <h3>Dashboard</h3>
          </router-link>
-          <a href="#" > 
+          <router-link :to="{name: 'clients.index'}"> 
             <span><font-awesome-icon icon="fa-solid fa-user" /></span>   
             <h3>Clients</h3>
-          </a>
+          </router-link>
          <router-link :to="{name: 'orders.index'}"> 
             <span><font-awesome-icon icon="fa-solid fa-clipboard-list" /></span>   
             <h3>Commandes</h3>

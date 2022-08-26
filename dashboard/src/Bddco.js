@@ -22,6 +22,13 @@ export const comments = [
     commentaire: 'La tablette que j\'ai commandé est extremement fluide',
     date: 'il y a 8 minutes',
     
+},
+{
+    image: 'profile-5.jpg',
+    nom: 'Kerry Washington ',
+    commentaire: 'Service rapide et efficace',
+    date: 'il y a 15 minutes',
+    
 }
 
 ]

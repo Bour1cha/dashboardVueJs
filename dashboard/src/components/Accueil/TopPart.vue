@@ -7,15 +7,15 @@
                     <div class="nav" id="navb"> 
 
             <div class="profile">
-                                         <div id="toggle">
+                        <div id="toggle">
                 <i class="indicator"></i>
-                     </div>
+                    </div>
                 <div class="info">
                     <p>Bonjour, <b>Utilisateur 1</b></p>
                     <small class="text-muted">Admin</small>
                 </div>
                 <div class="profile-photo">
-                    <img src="@/assets/img/profile-1.jpg" alt="profile_1">
+                <router-link to="/"><img src="@/assets/img/profile-1.jpg" alt="profile_1"></router-link>    
                 </div>
             </div>
           </div>

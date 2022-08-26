@@ -5,7 +5,7 @@
 
 <template>
 <body class="back">
-    <div class = "container">
+    <div class="container">
       <!-- Sidebar -->
       <x-sidebar/>
       <!-- partie centrale -->
