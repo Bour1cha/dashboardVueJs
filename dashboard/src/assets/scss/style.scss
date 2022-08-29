@@ -616,7 +616,6 @@ main {
         }
 
         .stat-container{
-            background: var(--color-white);
             padding: 60px;
             display: flex;
             justify-content: center;
@@ -630,7 +629,11 @@ main {
                     border-radius: 4px;
                     overflow: hidden;
                     margin: 10px 0;
+                    
+                 
                 }
+
+                
 
                 .stats__item {
                     margin: 0 10px ;
@@ -648,6 +651,7 @@ main {
         }
     }
 }
+
 // id des textes pour le camembert
 
 

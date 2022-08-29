@@ -6,10 +6,10 @@
                   <!-- <table> permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions. -->
                   <table class="back">
                         <h1>Age</h1>
-                      <div class="stat-container">
+                      <div class="stat-container back">
                           
                                 <div class="stats">
-                                  <div class="stats__item">
+                                  <div class="stats__item" >
                                       <span class="stats__percentage">27.5%</span>
                                       <div class="stats__bar"></div>
                                       <span>18-24</span>
@@ -51,7 +51,7 @@
                               </div>
                           </div>
                         </div>
-          -
+          
                     
                       <span class="lowerText">100% du total des clients</span>
                  

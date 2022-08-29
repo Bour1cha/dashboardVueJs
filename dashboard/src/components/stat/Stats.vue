@@ -19,7 +19,6 @@
       <div class="right">
         <!-- header -->
           <TopPart/>
-        <SalesAnalyst  SalesAnalyst :tree_analyses="DataAnalysesVentes" />
       </div>
     </div>
 </body>
@@ -44,38 +43,7 @@ import Statbar from './Statbar.vue'
 export default {
       components: { XSidebar, TopPart, RecentOrder, Charts, SalesAnalyst, Insights, Statbar },
 
-    
-    setup() {
-      // script pour l'importation des données de la bases de donéne bdd pour les analyses de ventes
-      class AnalysesVentes {
-          constructor (logo,statut,date,pourcentage,nombres){
-              this.logo = logo
-              this.statut = statut
-              this.date = date
-              this.pourcentage = pourcentage
-              this.nombres = nombres
-          }
-      }
-// variable pour les analyses de ventes
-let DataAnalysesVentes = ref([]);
-
-
-
-const makeDataAnalysesVentes = () => DataAnalysesVentes.value = infoAnalyse.map(infos => new AnalysesVentes(infos.logo, infos.statut, infos.date, infos.pourcentage, infos.nombres))
-
-  // lorsque tout les composants sont chargés
-    onMounted(() => {
-      makeDataAnalysesVentes()
-    });
-
-  //return
-    return {
-      DataAnalysesVentes
-
-
-}
-}
-      
+       
 }
 </script>
 
