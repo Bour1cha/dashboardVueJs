@@ -248,19 +248,11 @@ aside {
     .top {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         margin-top: 1.4rem;
 
     }
 
-    .logo {
-        display: flex;
-        gap: 0.8rem;
-    }
-    .logo img {
-        width: 2rem;
-        height: 2rem;
-    }
 
     .close {
         display: none;
@@ -1000,6 +992,13 @@ main {
                 }
             }
         }
+            .logo {
+                .logo img {
+                    width: 6rem;
+                    height: 2rem;
+                }
+            }
+      
 
     }
 

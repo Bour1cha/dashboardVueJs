@@ -2,8 +2,8 @@
       <aside class="back">
         <div class="top">
           <div class="logo">
-            <img src="@/assets/img/logo.png" alt="logo">
-            <h2>DIGI<span class="danger">SERVICES</span></h2>
+            <img src="@/assets/img/digi.png" alt="logo">
+            <!-- <h2>DIGI<span class="danger">SERVICES</span></h2> -->
           </div>
           <div class="close" id="close-btn">
          <span><font-awesome-icon icon="fa-solid fa-xmark" /></span>   
