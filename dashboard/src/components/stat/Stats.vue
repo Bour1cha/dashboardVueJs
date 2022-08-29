@@ -26,9 +26,7 @@
 
 
 <script>
-//import bdd
-import {infoAnalyse} from '@/Bdd'
-import { onMounted, ref } from 'vue';
+
 //components
 import Insights from '../Accueil/Insights.vue';
 import XSidebar from '../Accueil/Sidebar.vue';

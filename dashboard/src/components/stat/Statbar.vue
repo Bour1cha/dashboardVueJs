@@ -4,9 +4,10 @@
     <div class="recent-bar">
                   <h2>Histogramme</h2>
                   <!-- <table> permet de représenter un tableau de données, c'est-à-dire des informations exprimées sur un tableau en deux dimensions. -->
-                  <table class="back">
+
                         <h1>Age</h1>
-                      <div class="stat-container back">
+                        
+                      <div class="stat-container">
                           
                                 <div class="stats">
                                   <div class="stats__item" >
@@ -51,11 +52,10 @@
                               </div>
                           </div>
                         </div>
+                        
+                          <span class="lowerText">100% du total des clients</span>
           
-                    
-                      <span class="lowerText">100% du total des clients</span>
                  
-                  </table>
 
                 </div>
                 
