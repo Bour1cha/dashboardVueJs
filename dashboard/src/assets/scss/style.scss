@@ -881,6 +881,10 @@ main {
             grid-template-columns: 1fr;
         }
 
+        #myChart{
+            display: none;
+        }
+
         aside {
             position: fixed;
             left: -100%;
@@ -1015,5 +1019,8 @@ main {
               main .recent-bar .stat-container{
                 display: block;
               }
+              #myChart{
+                display: none;
+            }
 
         }

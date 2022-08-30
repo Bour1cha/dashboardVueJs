@@ -54,7 +54,7 @@
                         </div>
                         
                           <span class="lowerText">100% du total des clients</span>
-          
+                            
                  
 
                 </div>

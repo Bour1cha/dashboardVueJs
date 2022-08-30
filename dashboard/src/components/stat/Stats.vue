@@ -13,7 +13,11 @@
           <h1>Statistiques</h1>
           <!-- Statistiques -->
             <Insights/>
+            <Statgraph1/>
             <Statbar/>
+
+
+           
       </main>
       <!-- partie droite -->
       <div class="right">
@@ -34,14 +38,13 @@ import TopPart from '../Accueil/TopPart.vue';
 import RecentOrder from '../Accueil/RecentOrder.vue';
 import Charts from '../Commandes/Charts.vue';
 import SalesAnalyst from '../Accueil/SalesAnalyses/SalesAnalyst.vue';
-import Statbar from './Statbar.vue'
+import Statbar from './Statbar.vue';
+import Statgraph1 from './Statgraph1.vue';
 
 
 
 export default {
-      components: { XSidebar, TopPart, RecentOrder, Charts, SalesAnalyst, Insights, Statbar },
-
-       
+      components: { XSidebar, TopPart, RecentOrder, Charts, SalesAnalyst, Insights, Statbar, Statgraph1 },
 }
 </script>
 
