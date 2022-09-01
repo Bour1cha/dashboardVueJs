@@ -7,6 +7,7 @@ export const contacts = [
     nom: 'André Sanchez',
     message: 'Bonjour Fournisseur 1  , rendez-vous la semaine prochaine',
     date: ' 12:31',
+    notif: '1',
     
 
 },
@@ -14,6 +15,7 @@ export const contacts = [
     nom: 'Lucie Bernard',
     message: 'Pouvez-m\'en dire plus s\'il vous plait ?',
     date: '12:47',
+    notif: '2',
     
 
 },{
@@ -21,6 +23,7 @@ export const contacts = [
     nom: 'Marie Dupont ',
     message: 'La tablette que j\'ai commandé ralentit lorsque j\'utilise cette application',
     date: '13:32',
+    notif: '4',
     
 },
 {
@@ -28,6 +31,7 @@ export const contacts = [
     nom: 'Kerry Washington ',
     message: 'Comment se passe la procédure pour vous retourner un colis ?',
     date: '14:11',
+    notif: '5',
     
 },
 {
@@ -35,6 +39,7 @@ export const contacts = [
     nom: 'Joséphine Garnier ',
     message: 'Je vous remercie pour votre temps',
     date: '15:11',
+    notif: '3',
     
 },
 

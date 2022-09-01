@@ -1,5 +1,5 @@
 <template>
-    <div class="blockchat">
+    <div class="blockchat" :class="{'active': clicked}" @click="onClick">
         <div class="imgbxchat">
           <img :src="contactMessageProfile" alt="profile_message2" class="covermessage">
         </div>
@@ -10,6 +10,7 @@
             </div>
             <div class="message_p">
               <p>{{ info_contactsmessage.message }}</p>
+              <b>{{ info_contactsmessage.notif }}</b>
             </div>
         </div>
       </div>
@@ -18,7 +19,7 @@
 <script>
 
 
-    import { computed } from 'vue'
+    import { computed, ref } from 'vue'
 import { src } from '@/utils'
 
 export default {
@@ -30,7 +31,12 @@ export default {
   setup(props) {
 
       const contactMessageProfile = computed(() => src(props.info_contactsmessage.image))
+
+const clicked =ref(false)
+
       return {
+        clicked,
+        onClick: () => clicked.value = true,
         contactMessageProfile
       }
   }

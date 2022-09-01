@@ -26,7 +26,10 @@
                      <Contactmessage v-for="(card,index) in tree_contactsmessage" :info_contactsmessage="card" :key="index"/>
               </div>
             </div>
-            <div class="rightside"></div>
+            <div class="rightside">
+
+              
+            </div>
           </div>
 
 

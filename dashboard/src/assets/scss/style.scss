@@ -957,6 +957,17 @@ main {
                             overflow: hidden;
                             text-overflow: ellipsis;
                         }
+
+                        b{
+                            background: var(--color-success);
+                            color: #fff;
+                            min-width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
                     }
                 }
         }

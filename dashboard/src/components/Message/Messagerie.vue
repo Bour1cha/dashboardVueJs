@@ -45,11 +45,12 @@ export default {
 
     // class pour les messages
          class Contactsmessage {
-          constructor (image,nom,message,date){
+          constructor (image,nom,message,date,notif){
               this.image = image
               this.nom = nom
               this.message = message
               this.date = date
+              this.notif = notif
           }
       }
 
@@ -58,7 +59,7 @@ export default {
 let DataContactsmessage = ref([]);
 
 
-const makeDataContactsmessage = () => DataContactsmessage.value = contacts.map(contact => new Contactsmessage(contact.image, contact.nom, contact.message, contact.date))
+const makeDataContactsmessage = () => DataContactsmessage.value = contacts.map(contact => new Contactsmessage(contact.image, contact.nom, contact.message, contact.date , contact.notif))
 
 
   // lorsque tout les composants sont chargés
