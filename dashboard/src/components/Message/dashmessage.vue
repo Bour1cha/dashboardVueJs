@@ -23,7 +23,7 @@
               </div>
               <!-- chat contact list-->
               <div class="chatlist">
-                     <Contactmessage/>
+                     <Contactmessage v-for="(card,index) in tree_contactsmessage" :info_contactsmessage="card" :key="index"/>
               </div>
             </div>
             <div class="rightside"></div>
@@ -38,8 +38,12 @@
                 
 <script>
 import Contactmessage from './contactmessage.vue';
+
 export default {
     name: "DashMessage",
+    props: {
+      tree_contactsmessage: Array,
+    },
     components: { Contactmessage }
 }
 </script>
