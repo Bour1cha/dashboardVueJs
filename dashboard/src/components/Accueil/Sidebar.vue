@@ -26,10 +26,10 @@
             <span><font-awesome-icon icon="fa-solid fa-chart-line" /></span>   
             <h3>Statistiques</h3>
           </router-link>
-          <a href="#">
+          <router-link :to="{name: 'messagerie.index'}"> 
             <span><font-awesome-icon icon="fa-solid fa-message" /></span>   
             <h3>Messages</h3> <span class="message-count">26</span>
-          </a>
+          </router-link>
           <a href="#">
             <span><font-awesome-icon icon="fa-solid fa-clipboard" /></span>   
             <h3>Produits</h3>
