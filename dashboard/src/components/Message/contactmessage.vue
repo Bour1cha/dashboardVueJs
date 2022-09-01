@@ -3,7 +3,7 @@
         <div class="imgbxchat">
           <img :src="contactMessageProfile" alt="profile_message2" class="covermessage">
         </div>
-        <div class="detailschat">
+        <div class="detailschat unread">
             <div class="listheadchat">
               <h4>{{ info_contactsmessage.nom }}</h4>
               <p class="timechat">{{ info_contactsmessage.date }}</p>
@@ -31,10 +31,10 @@ export default {
   setup(props) {
 
       const contactMessageProfile = computed(() => src(props.info_contactsmessage.image))
+// fonction pour cliqué
+        const clicked =ref(false)
 
-const clicked =ref(false)
-
-      return {
+return {
         clicked,
         onClick: () => clicked.value = true,
         contactMessageProfile

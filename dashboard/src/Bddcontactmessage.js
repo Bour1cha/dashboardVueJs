@@ -42,6 +42,62 @@ export const contacts = [
     notif: '3',
     
 },
+{
+    image: 'profile-7.jpg',
+    nom: 'Bernard Campan',
+    message: 'Je vous remercie pour votre temps',
+    date: '15:11',
+    notif: '6',
+    
+},
+{
+    image: 'profile-8.jpg',
+    nom: 'André le paté',
+    message: 'Je vous remercie pour votre temps',
+    date: '15:11',
+    notif: '22',
+    
+},
+{
+    image: 'profile-9.jpg',
+    nom: 'Josiane Pika ',
+    message: 'Je vous remercie pour votre temps',
+    date: '15:11',
+    notif: '1',
+    
+},
+{
+    image: 'profile-10.jpg',
+    nom: 'Arthur Kingus ',
+    message: 'Je vous remercie pour votre temps',
+    date: '15:11',
+    notif: '7',
+    
+},
+{
+    image: 'profile-11.jpg',
+    nom: 'Bernadette Chirac ',
+    message: 'Je vous remercie pour votre temps',
+    date: '15:11',
+    notif: '6',
+    
+},
+{
+    image: 'profile-12.jpg',
+    nom: 'Claudia Garner ',
+    message: 'Je vous remercie pour votre temps',
+    date: '15:11',
+    notif: '8',
+    
+},
+{
+    image: 'profile-13.jpg',
+    nom: 'Brad Pitt ',
+    message: 'Je vous remercie pour votre temps',
+    date: '15:11',
+    notif: '17',
+    
+},
 
 
 

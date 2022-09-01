@@ -27,8 +27,10 @@
               </div>
             </div>
             <div class="rightside">
+              <div class="headermessage">
+                
+              </div>
 
-              
             </div>
           </div>
 

@@ -910,6 +910,8 @@ main {
                     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
                     cursor: pointer;
 
+           
+
                     .imgbxchat{
                         position: relative;
                         min-width: 45px;
@@ -937,12 +939,15 @@ main {
                             .timechat{
                                 font-size: 0.75em;
                                 color: #aaa;
+                            
                             }
+
+                            
 
                    
                         }
                     }
-
+                
                     .message_p{
                         display: flex;
                         justify-content: space-between;
@@ -969,6 +974,10 @@ main {
                             align-items: center;
                         }
                     }
+                }
+
+                .blockchat:hover{
+                    background: #f5f5f5;
                 }
         }
 
@@ -1002,6 +1011,14 @@ main {
         opacity: 0.2;
         }
     }
+}
+
+.chatlist .blockchat .unread .detailschat .listheadchat .timechat {
+    color: #41f1b6;
+}
+// class active lorsque l'on clique sur les messages
+.container-message .container-messaged .chatlist .blockchat.active{
+    background:#ebebeb ;       
 }
 
 // media queries
