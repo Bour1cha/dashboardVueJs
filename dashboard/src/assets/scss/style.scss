@@ -1021,6 +1021,71 @@ main {
     background:#ebebeb ;       
 }
 
+.imgText{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h4{
+            font-weight: 500;
+            line-height: 1.2em;
+            margin-left: 15px;
+
+            span{
+                font-size: 0.8em;
+                color: #555;
+            }
+        }
+}
+// message des chatbox
+
+.chatBox{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px );
+    padding: 50px;
+    overflow-y: auto;
+
+    .message{
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin: 5px 0;
+
+        p{
+            position: relative;
+            right: 0;
+            text-align: right;
+            max-width: 65%;
+            padding: 12px;
+            background: var(--color-danger);
+            border-radius: 10px;
+            font-size: 0.9em;
+
+            span {
+                display: block;
+                margin-top: 5px;
+                font-size: 0.85em;
+                opacity: 0.5;
+            }
+        }
+        p::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -12px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg,var(--color-danger) 0% ,var(--color-danger) 50% , transparent 50% , transparent);
+
+        }
+    }
+
+    .my_message{
+        justify-content: flex-end;
+    }
+}
 // media queries
 // grandes tablettes et ordinateurs portables
     @media screen and (max-width: 1200px) {
